@@ -32,4 +32,8 @@ contract MyERC1155 is ERC1155, Ownable {
         require(bytes(_uris[tokenId]).length == 0, "Cannot set uri twice"); 
         _uris[tokenId] = uri_; 
     }
+
+     function Tokenuri(uint256 tokenId) public view returns(string memory){
+        return _uris[tokenId];
+    }
 }
