@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 contract MyERC1155 is ERC1155, Ownable {
     
     uint256 public constant nft1 = 1;
-    uint256 public constant nft2=2;
+    uint256 public constant nft2 = 2;
     
     mapping (uint256 => string) private _uris;
 

@@ -5,9 +5,15 @@ require('@openzeppelin/hardhat-upgrades');
 
 module.exports = {
   solidity: "0.8.17",
- networks:{ goerli:{
-  url: process.env.ALCHEMY_API_KEY||"",
-  accounts: [process.env.PrivateKey],
-  },
-},
+//  networks:{ goerli:{
+//   url: process.env.ALCHEMY_API_KEY||"",
+//   accounts: [process.env.PrivateKey],
+//   },
+// },
+networks: {
+  local: {
+    url: "http://localhost:8545",
+    chainId: 31337
+  }
+}
 };
